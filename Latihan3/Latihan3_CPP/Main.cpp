@@ -12,24 +12,17 @@ int main()
 	processor.setName("Intel i9");
 	processor.setPrice(2000000);
 
-	Ram ram = Ram(8, 1000000);
+	Ram ram = Ram("16GB", 1000000);
 
-	Disk disk = Disk("SSD", 512, 800000);
+	Disk disk = Disk("SSD", "3TB", 3000000);
 
 	pc.setDisk(disk);
 	pc.setProcessor(processor);
 	pc.setRam(ram);
 	pc.setTotalPrice(processor.getPrice(), ram.getPrice(), disk.getPrice());
 
-	// show class
-	cout << "Processor Name  : " << pc.getProcessor().getName() << endl;
-	cout << "Processor Price : " << pc.getProcessor().getPrice() << endl;
-	cout << "Ram Capacity	: " << pc.getRam().getCapacity() << " GB" << endl;
-	cout << "Ram Price	: " << pc.getRam().getPrice() << endl;
-	cout << "Disk Type	: " << pc.getDisk().getType() << endl;
-	cout << "Disk Capacity	: " << pc.getDisk().getCapacity() << " GB" << endl;
-	cout << "Disk Price	: " << pc.getDisk().getPrice() << endl;
-	cout << "Total Price	: " << pc.getTotalPrice() << endl;
+	// show class instance
+	pc.ShowClass();
 
 	return (0);
 }

@@ -8,13 +8,13 @@ private:
 	/* data */
 	// class attribute
 	string type;
-	int capacity;
+	string capacity;
 	int price;
 
 public:
 	Disk(/* args */){};
 	// constructors
-	Disk(string type, int capacity, int price)
+	Disk(string type, string capacity, int price)
 	{
 		this->type = type;
 		this->capacity = capacity;
@@ -32,12 +32,12 @@ public:
 		return this->type;
 	};
 
-	void setCapacity(int capacity)
+	void setCapacity(string capacity)
 	{
 		this->capacity = capacity;
 	};
 
-	int getCapacity()
+	string getCapacity()
 	{
 		return this->capacity;
 	};

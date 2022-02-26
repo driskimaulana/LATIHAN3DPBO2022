@@ -1,6 +1,10 @@
+#include <iostream>
+#include <string>
 #include "Processor.cpp"
 #include "Ram.cpp"
 #include "Disk.cpp"
+
+using namespace std;
 
 class Pc
 {
@@ -62,6 +66,29 @@ public:
 	int getTotalPrice()
 	{
 		return this->totalPrice;
+	}
+
+	// show class method
+	void ShowClass()
+	{
+		cout << "	PC SPECS" << endl;
+		cout << "PC Price	: " << this->totalPrice << endl;
+		cout << "=========================\n";
+		cout << "	PROCESSOR\n";
+		cout << "=========================\n";
+		cout << "Processor Name  : " << this->processor.getName() << endl;
+		cout << "Processor Price : " << this->processor.getPrice() << endl;
+		cout << "=========================\n";
+		cout << "	DISK\n";
+		cout << "=========================\n";
+		cout << "Disk Type	: " << this->disk.getType() << endl;
+		cout << "Disk Capacity	: " << this->disk.getCapacity() << endl;
+		cout << "Disk Price	: " << this->disk.getPrice() << endl;
+		cout << "=========================\n";
+		cout << "	RAM\n";
+		cout << "=========================\n";
+		cout << "Ram Capacity	: " << this->ram.getCapacity() << endl;
+		cout << "Ram Price	: " << this->ram.getPrice() << endl;
 	}
 
 	// destructors

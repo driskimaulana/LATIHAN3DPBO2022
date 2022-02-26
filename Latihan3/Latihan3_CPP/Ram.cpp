@@ -1,27 +1,31 @@
+#include <string>
+
+using namespace std;
+
 class Ram
 {
 private:
 	/* data */
 	// class attribute
-	int capacity;
+	string capacity;
 	int price;
 
 public:
 	Ram(/* args */){};
 
-	Ram(int capacity, int price)
+	Ram(string capacity, int price)
 	{
 		this->capacity = capacity;
 		this->price = price;
 	};
 
 	// getter and setter
-	void setCapacity(int capacity)
+	void setCapacity(string capacity)
 	{
 		this->capacity = capacity;
 	};
 
-	int getCapacity()
+	string getCapacity()
 	{
 		return this->capacity;
 	};
